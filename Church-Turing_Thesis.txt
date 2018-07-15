@@ -1,0 +1,33 @@
+in the development of the theory of computing, we have presented several models of coputing devices:
+
+1. Finite automata are good models for devices that have a small amount of memory;
+
+2. Pushdown automata are models for devices that have an unlimited memory that is useable ONLY in the last in, first out manner of a stack.
+
+However, we have shown that some very simple tasks are beyond the capabilities of these models. Hence they are too restricted to serve as models of general purpose computers.
+
+
+
+CHAPTER THREE: TURING MACHINES
+
+A much more powerful model, firstly propised by Alan Turing in 1936, called the 'Turing Machine'.
+
+It is similar to a finite automata but with an unlimited and unrestricted memory.
+
+A Turing Machine is a much more accurate model of a general purpose computer. A TM can do everything that a real computer can do.(Nonetheless, even a TM cannot solve certain problems. In a very real sense, these problems are beyond the theoretical limits of computations).
+
+--CHARACTERS:
+	1. It uses an infinite tape as its unlimited memory.	
+	2. It has a tape head that can READ AND WRITE symbols and move around on the tape.
+	3. Initially the tape contains only the input string and is blank everywhere else; if the machine needs to store information, it may write this information on the tape.
+	4. To read the information that it has written, the machine can move its head back over it.
+	5. The machine continues computing until it decides to produce an output. The OUTPUT (ACCEPT and REJECT) are obtained by entering designated accepting and rejecting states
+	6. If it does not enter an accepting or a rejecting state, it will go on forever, NEVER HALTING.
+
+--DIFFERENCES BETWEEN FAs AND TMs:
+	1. the TM can both write on the tape and read from it.
+	2. the read-write head can move both to the left and to the right.
+	3. the tape is infinite.
+	4. the special states for rejecting and accepting take effect immediately.
+
+
