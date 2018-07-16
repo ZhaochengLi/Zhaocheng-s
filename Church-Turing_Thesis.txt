@@ -1,4 +1,4 @@
-in the development of the theory of computing, we have presented several models of coputing devices:
+In the development of the theory of computing, we have presented several models of coputing devices:
 
 1. Finite automata are good models for devices that have a small amount of memory;
 
@@ -29,5 +29,6 @@ A Turing Machine is a much more accurate model of a general purpose computer. A 
 	2. the read-write head can move both to the left and to the right.
 	3. the tape is infinite.
 	4. the special states for rejecting and accepting take effect immediately.
+
 
 
