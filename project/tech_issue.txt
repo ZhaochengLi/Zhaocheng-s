@@ -1,0 +1,11 @@
+mod 'sys' in Python: system - specific parameters and functions
+	this module provides access to some variables used or maintained by the interpreter and to functions that interacts strongly with the interpreter. It is always available.
+
+[what is interpreter?]
+[An interpreter is a computer program that is used to directly program instrucitons written using one of the many high-level programming languages. The interpreter transforms the high-level program into a intermediate language that it then executes, or it could parse the high-level source code and then performs the commands directly, which is done line by line or statement by statement]
+
+1. sys.argv: the list of command line arguments passed to a python script. argv[0] is the script name, or -c if you use it as commandl line option, or empty string if no script name passed to the interpreter.
+
+2. sys.exit([arg]): used to exit from python, and the arg is optional. arg can be an integer giving the exit status (defalting to 0), or another type of object. If it is integer, 0 is considered "successful termination" and non-zero value is considered "abnormal termination" (best to be 0-127) None is equivalent to passing 0. And any other object is printed to stderr and results in an exit code of 1. In particular, sys.exit("some error message") is a quick way to exit a program when an error occurs.
+
+
