@@ -31,7 +31,9 @@ Sudoku_solved|folder **generated in sat2sud.py** contains the solutions to sudok
 Sudoku_solved4x4|folder **generated in sat2sud.py** contains the solutions to sudoku puzzles **with argument "miniSAT_encoded4x4"**
 
 ## Executions
-*Notice:* all the sudoku puzzles in this project must be in the format of example inputs. And the unknown grid will be marked either ".", "*", or "?".
+**Notice:** all the sudoku puzzles in this project must be in the format of example inputs. And the unknown grid will be marked either ".", "*", or "?".
+
+**Notice:** all the output folders doesn't need to be deleted manully everytime the execution is repeated. Those folder will be automatically over-written accordingly by the next execution with the choice of input text file.
 
 file executed|Command|Argument|Output|Property
 ---|---|---|---|---
