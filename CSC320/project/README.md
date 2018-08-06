@@ -9,6 +9,15 @@ Jiaquan Zhang (V00836047)<br/>
 Tony Tang (V00833347)<br/>
 Ching Hsuan Hu (V00841056)<br/>
 
+## Executions
+file executed|Command|Argument|Output|Property
+---|---|---|---|---
+***run_timer.py***|`python run_timer.py [file name]` or `python3 run_timer.py [file name]`|`[file name]` we have three files available: ***top95.txt***, ***4x4grid.txt*** (all for extended task), and ***p096_sudoku.txt*** (for basic task).|two folders, one (***Grid_CNF4x4/Grid_CNF/Grid_CNF_extended***) that contains miniSAT CNF-format inputs; another (***miniSAT_encoded4x4/miniSAT_encoded/miniSAT_hard_encoded***) that contains the miniSAT endcoded files, respectively and accordingly to the argument; and time |basic and extended tasks mixed; available to process sudoku puzzles of any length.
+
+**Notice:** all the sudoku puzzles in this project must be in the format of example inputs. And the unknown grid will be marked either ".", "*", or "?".
+
+**Notice:** all the output folders doesn't need to be deleted manully everytime the execution is repeated. Those folder will be automatically over-written accordingly by the next execution with the choice of input text file.
+
 ## File Specification:
 Files|Description
 ---|---
@@ -30,15 +39,6 @@ miniSAT_hard_encoded|A folder **generated in sud2sat.py** contains the encoded f
 Sudoku_hard_solved|A folder **generated in sat2sud.py** contains the solutions to sudoku puzzles **with argument "miniSAT_hard_encoded"**
 Sudoku_solved|A folder **generated in sat2sud.py** contains the solutions to sudoku puzzles **with argument "miniSAT_encoded"**
 Sudoku_solved4x4|A folder **generated in sat2sud.py** contains the solutions to sudoku puzzles **with argument "miniSAT_encoded4x4"**
-
-## Executions
-**Notice:** all the sudoku puzzles in this project must be in the format of example inputs. And the unknown grid will be marked either ".", "*", or "?".
-
-**Notice:** all the output folders doesn't need to be deleted manully everytime the execution is repeated. Those folder will be automatically over-written accordingly by the next execution with the choice of input text file.
-
-file executed|Command|Argument|Output|Property
----|---|---|---|---
-***run_timer.py***|`python run_timer.py [file name]` or `python3 run_timer.py [file name]`|`[file name]` we have three files available: ***top95.txt***, ***4x4grid.txt*** (all for extended task), and ***p096_sudoku.txt*** (for basic task).|two folders, one (***Grid_CNF4x4/Grid_CNF/Grid_CNF_extended***) that contains miniSAT CNF-format inputs; another (***miniSAT_encoded4x4/miniSAT_encoded/miniSAT_hard_encoded***) that contains the miniSAT endcoded files, respectively and accordingly to the argument; and time |basic and extended tasks mixed; available to process sudoku puzzles of any length.
 
 ## Basic Tasks
 The way of executing buth `sud2sat.py` and `sat2sud.py` has been mentioned in last section. So are their input arguments and outputs;
