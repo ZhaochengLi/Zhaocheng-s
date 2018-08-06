@@ -10,9 +10,11 @@ Tony Tang (V00833347)<br/>
 Ching Hsuan Hu (V00841056)<br/>
 
 ## Executions
+**Notice:** You only need to execute `run_timer.py`, which will call `sud2sat.py` and `sat2sud.py` from inside.
+
 file executed|Command|Argument|Output|Property
 ---|---|---|---|---
-***run_timer.py***|`python run_timer.py [file name]` or `python3 run_timer.py [file name]`|`[file name]` we have three files available: ***top95.txt***, ***4x4grid.txt*** (all for extended task), and ***p096_sudoku.txt*** (for basic task).|two folders, one (***Grid_CNF4x4/Grid_CNF/Grid_CNF_extended***) that contains miniSAT CNF-format inputs; another (***miniSAT_encoded4x4/miniSAT_encoded/miniSAT_hard_encoded***) that contains the miniSAT endcoded files, respectively and accordingly to the argument; and time |basic and extended tasks mixed; available to process sudoku puzzles of any length.
+***run_timer.py***|`python run_timer.py [puzzle file]` or `python3 run_timer.py [puzzle file]`|`[puzzle file]` we have three files available: ***top95.txt***, ***4x4grid.txt*** (all for extended task), and ***p096_sudoku.txt*** (for basic task).|two folders, one (***Grid_CNF4x4/Grid_CNF/Grid_CNF_extended***) that contains miniSAT CNF-format inputs; another (***miniSAT_encoded4x4/miniSAT_encoded/miniSAT_hard_encoded***) that contains the miniSAT endcoded files, respectively and accordingly to the argument; and time |basic and extended tasks mixed; available to process sudoku puzzles of any length.
 
 **Notice:** all the sudoku puzzles in this project must be in the format of example inputs. And the unknown grid will be marked either ".", "*", or "?".
 
