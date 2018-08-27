@@ -1,7 +1,8 @@
-[Souce: CSDN from Wechat]
-如何使用 Python 生成二维码图片。
+[Souce: CSDN from Wechat] 作者：极客猴，热衷于 Python，目前擅长于利用 Python制作网路爬虫以及 Django 框架。 声明：本文为作者投稿，版权归对方所有。
 
-二维码 Intro:
+# 如何使用 Python 生成二维码图片。
+
+## 二维码 Intro:
 
 二维码（2-dimensional bar code），是用某种特定的几何图形按一定规律在平面（二维方向上）分布的黑白相间的图形记录数据符号信息的。它能将数字、英文字母、汉字、日文字母、特殊符号（如空格，%，/ 等）、二进制等信息记录到一个正方形的图片中。
 
@@ -12,16 +13,17 @@
 QR code 是一种矩阵式二维条码（又称棋盘式二维条码）。它是在一个矩形空间通过黑、白像素在矩阵中的不同分布进行编码。在矩阵相应元素位置上，用点（方点、圆点或其他形状）的出现表示二进制“1”，点的不出现表示二进制的“0”，点的排列组合确定了矩阵式二维条码所代表的意义。
 
 
-二维码结构
+## 二维码结构
 
 我们的目的是要使用 Python 生成 QR 码，那我们需要先了解二维码（QR码）的结构。
 
 根据标准（ISO/IEC 18004），我们可以了解到 QR 码结构如下：
 
+![image](https://github.com/ZhaochengLi/Zhaocheng-s/blob/master/source/images/QRcode.jpg)
 
 图片来源于网络
 
-1、功能图形
+### 1、功能图形
 
 功能图形是不参与编码数据的区域。它包含空白区、位置探测图形、位置探测图形分隔符、定位图形、校正图形五大模块。
 
@@ -35,7 +37,7 @@ QR code 是一种矩阵式二维条码（又称棋盘式二维条码）。它是
 
 校正图形：只有 Version 2 及以上的QR码有校正标识，校正标识用于进一步校正坐标系。
 
-2、 编码区域
+### 2、 编码区域
 
 编码区域是数据进行编码存储的区域，它由格式信息、版本信息、数据和纠错码字三部分构成。
 
@@ -45,13 +47,7 @@ QR code 是一种矩阵式二维条码（又称棋盘式二维条码）。它是
 
 数据和纠错码：主要是存储实际数据以及用于纠错码字。
 
-
-
-
-
-二维码的绘制过程
-
-
+## 二维码的绘制过程
 
 二维码已经有一套国际标准了，所以绘制二维码的过程要严格按照标准来执行。这个过程比较复杂，下面总结出了大致绘制过程。如果你想深入了解绘制细节，可以阅读具体标准。
 
@@ -71,74 +67,14 @@ QR code 是一种矩阵式二维条码（又称棋盘式二维条码）。它是
 
 最后绘制蒙版图案。因为按照上述方式填充内容，可能会出现大面积空白或黑块的情况，导致扫描识别十分困难。所以需要对整个图像与蒙版进行蒙版操作(Masking)，蒙版操作即为异或 XOR 操作。在这一步，我们可以将数据排列成各种图片。
 
+## 二维码的生成
+
+我们既然已经了解二维码原理，那么可以利用 Python 生成二维码. But we do not need to start from scratch, 使用现成的库即可。
+
+推荐两个库：qrcode 和 python-qrcode。
+
+We will explore more in the further practices.
 
 
-
-
-二维码的生成
-
-
-
-我们既然已经了解二维码原理，那么可以利用 Python 生成二维码。网络上高人比比皆是，已经有大神编写了 Python 生成二维码的第三方库，所以我们不需要重复造轮子, 使用现成的库即可。
-
-我就推荐两个库：qrcode 和 python-qrcode。
-
-1、qrcode
-
-qrcode 运行在 Python 3 版本上，它可以玩出很多花样。例如能生成以下三种二维码图片：普通二维码、带图片的艺术二维码（黑白与彩色）、动态二维码（黑白与彩色）。它比较适合直接用于生成二维码图片的场景。
-
-安装 qrcode 库可以使用 pip 方式。但是该库依赖 pillow、numpy 和 imageio。因此，我们需要先安装依赖库，再安装 qrcode。最后的安装命令如下：
-
-# 逐一安装
-pip install pillow
-pip install numpy
-pip install imageio
-pip install myqr
-该库生成带图片的艺术二维码算是一大亮点，具体用法如下：
-
-myqr https://github.com -p github.jpg -c
-上述命令作用是将 Github 主页写到彩色二维码中。
-
-
-
-该库还支持生成 Gif 的彩色二维码图片，具体用法如下：
-
-myqr https://github.com -p github.gif -c -con 1.5 -bri 1.6
-效果图如下：
-
-
-
-最后补上该库的 Github 地址：https://github.com/sylnsfar/qrcode/。
-
-2、python-qrcode
-
-python-qrcode 相比 qrcode 要稍微逊色一点。不过它也有自己的特色，它支持生成矢量图，而且比较适合在代码中生成二维码的场景。
-
-安装 python-qrcode 同样建议使用 pip 方式，安装命令如下：
-
-pip install qrcode
-在 Python 代码中，最简单的用法是这样。
-
-import qrcode
-img = qrcode.make('https://github.com')
-它也支持自定义二维码的信息，具体用法如下：
-
-import qrcode
-qr = qrcode.QRCode(
-    version=1,
-    error_correction=qrcode.constants.ERROR_CORRECT_L,
-    box_size=10,
-    border=4,
-)
-qr.add_data('https://github.com')
-qr.make(fit=True)
-
-img = qr.make_image(fill_color="black", back_color="white")
-如果你想深入了解该库，可以到 Github 仓库阅读相关的文档。
-
-Github 地址：https://github.com/lincolnloop/python-qrcode。
-
-作者：极客猴，热衷于 Python，目前擅长于利用 Python制作网路爬虫以及 Django 框架。
-
-声明：本文为作者投稿，版权归对方所有。
+End.
 
