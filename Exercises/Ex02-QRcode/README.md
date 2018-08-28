@@ -80,3 +80,4 @@ End.
 By the way, these are the QR code designed for my GitHub webpage:
 
 ![pic](https://github.com/ZhaochengLi/Zhaocheng-s/blob/master/Exercises/Ex02-QRcode/cat_qrcode.gif)
+![pic2](https://github.com/ZhaochengLi/Zhaocheng-s/blob/master/Exercises/Ex02-QRcode/github_qrcode.png)
