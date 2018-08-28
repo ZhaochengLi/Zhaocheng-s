@@ -75,6 +75,8 @@ QR code 是一种矩阵式二维条码（又称棋盘式二维条码）。它是
 
 We will explore more in the further practices.
 
-
 End.
 
+By the way, these are the QR code designed for my GitHub webpage:
+
+[pic]()
