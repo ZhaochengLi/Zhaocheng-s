@@ -1,4 +1,4 @@
-[Souce: CSDN from Wechat] 作者：极客猴，热衷于 Python，目前擅长于利用 Python制作网路爬虫以及 Django 框架。 声明：本文为作者投稿，版权归对方所有。
+[Souce: CSDN from Wechat] 作者：极客猴，热衷于 Python，目前擅长于利用 Python制作网路爬虫以及 Django 框架; 版权归对方所有。
 
 # 如何使用 Python 生成二维码图片。
 
