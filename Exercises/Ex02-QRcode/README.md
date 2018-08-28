@@ -19,7 +19,7 @@ QR code 是一种矩阵式二维条码（又称棋盘式二维条码）。它是
 
 根据标准（ISO/IEC 18004），我们可以了解到 QR 码结构如下：
 
-![image](https://github.com/ZhaochengLi/Zhaocheng-s/blob/master/source/images/QRcode.jpg)
+![image](https://github.com/ZhaochengLi/Zhaocheng-s/blob/master/source/images/qrcode/QRcode.jpg)
 
 图片来源于网络
 
