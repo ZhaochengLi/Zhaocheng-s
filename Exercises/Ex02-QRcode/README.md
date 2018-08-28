@@ -1,4 +1,4 @@
-[Souce: CSDN from Wechat] 作者：极客猴，热衷于 Python，目前擅长于利用 Python制作网路爬虫以及 Django 框架。 声明：本文为作者投稿，版权归对方所有。
+[Souce: CSDN from Wechat] 作者：极客猴，热衷于 Python，目前擅长于利用 Python制作网路爬虫以及 Django 框架; 版权归对方所有。
 
 # 如何使用 Python 生成二维码图片。
 
@@ -19,7 +19,7 @@ QR code 是一种矩阵式二维条码（又称棋盘式二维条码）。它是
 
 根据标准（ISO/IEC 18004），我们可以了解到 QR 码结构如下：
 
-![image](https://github.com/ZhaochengLi/Zhaocheng-s/blob/master/source/images/QRcode.jpg)
+![image](https://github.com/ZhaochengLi/Zhaocheng-s/blob/master/source/images/qrcode/QRcode.jpg)
 
 图片来源于网络
 
@@ -75,6 +75,8 @@ QR code 是一种矩阵式二维条码（又称棋盘式二维条码）。它是
 
 We will explore more in the further practices.
 
-
 End.
 
+By the way, these are the QR code designed for my GitHub webpage:
+
+[pic]()
