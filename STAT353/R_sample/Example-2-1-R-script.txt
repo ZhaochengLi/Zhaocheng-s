@@ -1,0 +1,45 @@
+<pre><div class="text_to_html"># Example 2.1: Using R to Analyze the Rocket Propellant Data
+
+
+#(1) file handling
+#
+#    step 1: download data file &quot;data-ex-2-1 (Rocket Prop)&quot; which is an MS Excel file.
+#    step 2: open the file in Excel. Then save it (a) in type &quot;Formatted text (space delimited)&quot; 
+#            and (b) under a new nameas &quot;data-ex-2-1&quot;. The file will be automatically identified 
+#            by a .prn indicating its type is Formatted text.
+#    step 3: open data-ex-2-1 in MS Word and edit the name of the variables to
+# 
+#    Obs       y      x
+#    1      2158.70 15.50
+#    2      1678.15 23.75
+#    3      2316.00  8.00
+#    ......
+
+
+#(2) Read data file into R
+
+data1=read.table(file=&quot;data-ex-2-1.prn&quot;, header=TRUE)  # file must be in R working directory (use
+#                R comment getwd() to find out) or a complete path to the file must be specified.
+attach(data1)  # data1 is a table in R. This allows variables in the table to be used individually.
+print(data1)   # see if there data points are correct
+
+
+
+#(2) Data analysis
+
+plot(x,y,xlab=&quot;age&quot;,ylab=&quot;shear strength&quot;) # generates a scatter plot to see what model to use
+fit1=lm(y~x,data1)   # fit a linear model; results of the fit saved in &quot;variable&quot; fit1
+
+anova(fit1)   # view ANOVA part of the results
+summary(fit1) # see other results (t-tests, F-tests, R-squared) 
+
+newx=data.frame(x=c(5,10))   # specify x values at which predictions about y are to be made
+predict(fit1, newx, interval=&quot;confidence&quot;)   # predictions for the E(y|x) at x=5 and x=10
+predict(fit1, newx, interval=&quot;prediction&quot;)   # predictions for y|x=5 and y|x=10
+
+abline(fit1,col=&quot;red&quot;)  # add the ls line to the scatter plot
+title(&quot;Least squares regression line&quot;)
+
+
+
+</div></pre>
