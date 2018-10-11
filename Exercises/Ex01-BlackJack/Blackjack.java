@@ -1,6 +1,6 @@
 //2018/May/04 11:56 PM
 //Zhaocheng Li
-
+//EDITED VERSION
 /*game design: ask user on console to see if user want to continue or stop, while showing the total points the user has. If the user says to continue, automatically, randomly generate random point and sum it up by the rule. Loop over and over until the user says to stop.*/
 
 /*idea: to it to another level --- let 3 players play and find a winner*/
