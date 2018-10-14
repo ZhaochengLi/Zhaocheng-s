@@ -10,3 +10,11 @@
 In order to achieve this, we aim to:
 - Identify the HIV-1 drug resistance mutations, and
 - Use it to **predict changes in drug susceptibility in future patients.**
+#### Specific Terminologies:
+1. *Wild type* or *Mutant Traits*: 
+- Most population are *polymorphic for most phenotypic traits*, from fur color to blood type. The allele that encodes the phenotype most common in a particular natural population is known as the **wild type** allele. It is often designated as "+" in genetic shorthand. Any form of the allele other than the wild type is known as a **mutant** form of that allele.
+- For example, for most penguins, they wear "tuxedox" as the one of their wild type. But Albino mutants look nekkid...
+2. IC-50 Values: (referenced from wikipedia)
+- *The half maximal inhibitory concentration (IC50)* is **a measure of the potency of a substance in inhibiting a specific biological or biochemical function**.
+- This quantitative measure **indicates how much of a particular drug or other substance (inhibitor) is needed to inhibit a given biological process (or component of a process, i.e. an enzyme, cell, cell receptor or microorganism) by half.** The values are typically expressed as molar concentration.
+- IC50 represents the concentration of a drug that is required for 50% inhibition in vitro.
