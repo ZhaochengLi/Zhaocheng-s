@@ -5,6 +5,7 @@
 - HIV as a wirldwide disease has affected about 2 million people per year, and we usually use anti-troviral drugs to treat HIV-1 affection.
 - The performance of the treatment is influenced by the ***drug resistance*** which is usually **caused by mutation** in molecular targets.
 #### Our purpose:
+> The first assignments will be using dataset to compare performance of prediction precision of linear regression models discussed in class.
 > *Unravel the relationship between mutations and HIV-1 drug resistance is very helpful to design new drugs and optimize existing drugs*
 #### Approach:
 In order to achieve this, we aim to:
