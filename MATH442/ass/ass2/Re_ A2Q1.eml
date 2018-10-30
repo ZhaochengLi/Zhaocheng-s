@@ -1,0 +1,110 @@
+Return-path: <junlingm@uvic.ca>
+Received: from pv33p00im-smtpin011.me.com ([17.142.194.136])
+ by ms25533.mac.com (Oracle Communications Messaging Server 8.0.1.3.20170906
+ 64bit (built Sep  6 2017)) with ESMTP id <0PG900BGCJDFBTE0@ms25533.mac.com>
+ for lizhaocheng0706@icloud.com; Mon, 08 Oct 2018 04:34:27 +0000 (GMT)
+Original-recipient: rfc822;lizhaocheng0706@icloud.com
+Received: from dugong.comp.uvic.ca (dugong.comp.uvic.ca [142.104.42.98])
+ by pv33p00im-smtpin011.me.com
+ (Oracle Communications Messaging Server 8.0.2.2.20180531 64bit (built May 31
+ 2018)) with ESMTPS id <0PG900CRSJDEBL60@pv33p00im-smtpin011.me.com> for
+ lizhaocheng0706@icloud.com (ORCPT lizhaocheng0706@icloud.com); Mon,
+ 08 Oct 2018 04:34:27 +0000 (GMT)
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
+ clxscore=1005 suspectscore=0 malwarescore=0 phishscore=0 adultscore=0
+ bulkscore=0 classifier=clx:Deliver adjust=0 reason=mlx scancount=1
+ engine=8.0.1-1807170000 definitions=main-1810080046
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:,,
+ definitions=2018-10-08_02:,, signatures=0
+Authentication-results: pv33p00im-dmarcmilter001.me.com; dmarc=none
+ header.from=uvic.ca
+Authentication-results: pv33p00im-spfmilter006.me.com; spf=none
+ (pv33p00im-spfmilter006.me.com: junlingm@uvic.ca does not designate permitted
+ sender hosts) smtp.mailfrom=junlingm@uvic.ca
+Received-SPF: none (pv33p00im-spfmilter006.me.com: junlingm@uvic.ca does not
+ designate permitted sender hosts) receiver=pv33p00im-spfmilter006.me.com;
+ client-ip=142.104.42.98; helo=dugong.comp.uvic.ca;
+ envelope-from=junlingm@uvic.ca
+Authentication-results: pv33p00im-dkimmilter015.me.com; dkim=none
+Received: from tailor.uvic.ca (tailor.uvic.ca [142.104.225.130])
+	by dugong.comp.uvic.ca (8.14.4/8.14.4) with ESMTP id w984YPCG045106
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=FAIL)
+	for <lizhaocheng0706@icloud.com>; Sun, 7 Oct 2018 21:34:25 -0700
+Received: from uaru.uvic.ca (142.104.224.130)
+ by tailor.uvic.ca (142.104.225.130) with Microsoft SMTP Server (TLS)
+ id 15.0.1367.3; Sun, 7 Oct 2018 21:34:25 -0700
+Received: from uaru.uvic.ca ([fe80::88d8:fdb7:9d6e:4dc3])
+ by uaru.uvic.ca ([fe80::88d8:fdb7:9d6e:4dc3%19]) with mapi id 15.00.1367.000;
+ Sun, 7 Oct 2018 21:34:25 -0700
+From: Junling Ma <junlingm@uvic.ca>
+To: Zhaocheng Li <lizhaocheng0706@icloud.com>
+Subject: Re: A2Q1
+Thread-topic: A2Q1
+Thread-index: AQHUXrbu6tIATv2GK0K6MqYhC/9eLaUVOEkA
+Date: Mon, 08 Oct 2018 04:34:25 +0000
+Message-id: <EE9697F1-9179-47E8-A0BC-7E46FF24A04C@uvic.ca>
+References: <B03AA293-6B0F-4C7A-8F07-E62A7E4334B7@icloud.com>
+In-reply-to: <B03AA293-6B0F-4C7A-8F07-E62A7E4334B7@icloud.com>
+Accept-Language: en-US
+Content-language: en-US
+X-MS-Has-Attach:
+X-Originating-IP: [142.104.193.193]
+Content-type: text/plain; charset=utf-8
+Content-id: <04372882B8BCC64D995A1DCF6C6A88D7@local.uvic.ca>
+Content-transfer-encoding: base64
+MIME-version: 1.0
+x-icloud-spam-score: 1111331700 f=uvic.ca;e=uvic.ca
+X-CLX-Spam: false
+X-CLX-UnSpecialScore: 412
+X-CLX-Score: 1005
+X-CLX-UShades: None
+X-CLX-Shades: Deliver
+X-MANTSH: 1TEIXWlwZGVoaGkNHB0tNT0ReQ0QeGxodEQpMQxcbHQQbHhgEGxMfBBkYEBseGh8
+ aEQpMWRcbGhofEQpZTRduT0ZDXE9YEQpfWRceGxgRCl9NF2RFRE8RCllJFx0fcRsGGx8adwYYG
+ hoGGgYaBh0dBhkacRsQGncGGgYaBhkaBhoGGgYacRoQGncGGhEKWV4XY255EQpDThdjBXlNfB1
+ FQ2NHGXNwG2hIekRTcm8efB4FUhoTbUhmYxEKWFwXGQQaBB4aB0wbT0kSEhhIBRsdBBseGAQbE
+ xMEGxoYEBseGh8aEQpeWRd5EmNmXxEKTVwXGx8eEQpMWhdoa2traxEKTEYXYmNrEQpDWhcbHhg
+ EGxoeBB4YBBMSEQpCXhcbEQpCRRd6QgFpS04fcwV9HREKQk4XZ1pCRUJZG2JzR08RCkJMF2Uec
+ n19GEx7W0QBEQpCbBduf2JyEgFFYHpwcBEKQkAXZVNbGxoeTBhpU2ARCkJYF24bW1kZElJ+TG9
+ GEQpNXhcbEQpwZxdiRk1hZmR6TR1jaRAZGhEKcGgXZVhyXV0ZYVAcX0kQGRoRCnBoF2deGX1IX
+ 3JYfWJMEBkaEQpwaBdvHR97ZHJwZF9GZxAZGhEKcGgXaF4aGWFATwFpc2cQGRoRCnBoF2xZHGl
+ SbBh/aBpkEBkaEQpwbBdlcEtQZxJ4UHpZbRAZGhEKcEwXYU9pTEASGgFeS1IQGRoRCm1+FxsRC
+ lhNF0sR
+x-dmarc-info: pass=none; dmarc-policy=(nopolicy); s=u0; d=u0
+x-dmarc-policy: none
+X-MS-TNEF-Correlator:
+x-ms-exchange-messagesentrepresentingtype: 1
+x-ms-exchange-transport-fromentityheader: Hosted
+x-tm-as-product-ver: SMEX-12.5.0.1300-8.5.1010-24142.004
+x-tm-as-result: No-8.719600-5.000000-10
+x-tmase-matchedrid: csPTYAMX1+G7lpQUW6Uvz7iMC5wdwKqdwZLXS0hN8p2XWkGwIjHSW40C
+	0Ul8ZPuVKF+ESfb5EVaIEbtYv/r1KpqBh2C4zHj7jFUG+PWNtyMLY4WjU47wQ3aIualmA7qVwJL
+	YAybWdAKKESQRsaiPEpp8TFtabJmzDsB+KQ9eA7DOH2d3vFNeCn5Lmbb/xUua/RM/+SKR6qd2ko
+	O34stHyBV5h0X3Htykjenw2507tJ+/WXZS/HqJ2gtuKBGekqUpOlxBO2IcOBY5+/qTp0yX/Ctw8
+	bsYCa1l4X9dFgjZ2NBPjvdT21VHh2oLIBSNkbVV
+x-tm-as-user-approved-sender: No
+x-tm-as-user-blocked-sender: No
+x-tmase-result: 10--8.719600-5.000000
+x-tmase-version: SMEX-12.5.0.1300-8.5.1010-24142.004
+X-UVic-Virus-Scanned: OK - Passed virus scan by ClamAV (clamd) on dugong
+X-UVic-Virus-Scanned: OK - Passed virus scan by Sophos (sophie) on dugong
+X-UVic-Scan: dugong.comp.uvic.ca filter_version 3.7.9
+X-Scanned-By: MIMEDefang 2.78
+
+VGhpcyBwcm9ibGVtIGlzIGFuIGFzeW1wdG90aWNhbGx5IGF1dG9ub21vdXMgbGluZWFyIHN5c3Rl
+bSwgaS5lLiwgaXQgaGFzIHRoZSBmb3JtIHjigJk9QXgrQih0KXgsIHdoZXJlIEIodCktPjAgYXMg
+dC0+aW5maW5pdHkuIEhvd2V2ZXIsIHRoZSBpbnRlZ3JhbCBvZiB8fEIodCl8fCBpcyBub3QgZmlu
+aXRlLCBzbyB3ZSBjYW5ub3QgZGVhbCB3aXRoIHRoZSBzeXN0ZW0gaWYgQSBoYXMgemVybyBlaWdl
+bnZhbHVlcy4gTHVja2lseSwgdGhlIHF1ZXN0aW9uIGFza3Mgd2hlbiB0aGUgb3JpZ2luIGlzIHVu
+c3RhYmxlLCB3aXRob3V0IGNvbnNpZGVyaW5nIHplcm8gKG9yIHB1cmUgaW1hZ2luYXJ5KSBlaWdl
+bnZhbHVlcy4NCg0KSnVubGluZw0KDQo+IE9uIE9jdCA3LCAyMDE4LCBhdCA4OjI4IFBNLCBaaGFv
+Y2hlbmcgTGkgPGxpemhhb2NoZW5nMDcwNkBpY2xvdWQuY29tPiB3cm90ZToNCj4gDQo+IEhpLCBQ
+cm9mZXNzb3IgTWENCj4gDQo+IFRoaXMgaXMgWmhhb2NoZW5nIGZvcm0gTWF0aDQ0Mg0KPiANCj4g
+SSBhbSBoYXZpbmcgdHJvdWJsZSB3aGVuIEkgcmV2aWV3IG15IGZpcnN0IHF1ZXN0aW9uIGluIEEy
+LCBjYSB5b3UgZ2l2ZSBhIGhpbnQgYWJvdXQgdGhpcyBxdWVzdGlvbj8gSG93IHNob3VsZCBJIGRl
+dGVybWluZSB0aGUgc3RhYmlsaXR5IG9mIHRoZSBvcmlnaW4gc2luY2UgaXTigJlzIGEgbm9uLWF1
+dG9ub21vdXMgc3lzdGVtIGFuZCB0aGUgZWlnZW52YWx1ZXMgYW5kIGVpZ2VudmVjdG9ycyBhcmUg
+cmVhbGx5IGRpZmZpY3VsdCB0byBjYWxjdWxhdGUgYW5kIHRoZXkgc2VlbSB0byBiZSB0aW1lLWRl
+cGVuZGVudC4NCj4gDQo+IElzIHRoaXMgcXVlc3Rpb24gc2ltaWxhciB0byB0aGUgc2Vjb25kIG9u
+ZT8NCj4gDQo+IFRoYW5rIHlvdSEgSGFwcHkgdGhhbmtzZ2l2aW5nIQ0KPiANCj4gU2VudCBmcm9t
+IG15IGlQaG9uZQ0KDQo=
