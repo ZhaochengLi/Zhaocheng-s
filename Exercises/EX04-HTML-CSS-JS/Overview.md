@@ -1,4 +1,4 @@
-#### Credit to 
+#### Credit to [Hubspot Lindsay Kolowich's Wed-design 101](https://blog.hubspot.com/marketing/web-design-html-css-javascript)
 ### This is a introductory course to the functionalities of JS, HTML, and CSS to the web design.
 > It is easy to forget that code without a browser is just a text file -- it's when you put that text file into a browser that the magic happens.
 > When you open a web page, your browser fetches the HTML and other programming languages involved and interprets it.
