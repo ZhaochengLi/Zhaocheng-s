@@ -12,7 +12,8 @@ xx <- matrix(rnorm(sample.size*pp, 0,5), sample.size, pp) # useless/noise predic
 colnames(xx) <- paste0("x", 1:pp+2)
 yy <- 5*x1 + 8*x2 + 3 + rnorm(sample.size)
 dat <- data.frame(yy=yy, x1=x1, x2=x2, xx)
-
+View(dat)
+View(dat$yy)
 
 #############
 # Compare two models by 10 fold Cross validation (external layer CV)
@@ -22,7 +23,7 @@ dat <- data.frame(yy=yy, x1=x1, x2=x2, xx)
 # you should use average of 5 drugs as parameter for this function in assignment 1
 nfold=10
 idx.cv <- createFolds(dat$yy, k=nfold, list=F)  
-
+View(idx.cv)
 #The candiate penalty parameter values to be selected by CV
 grid=10^seq(10,-2,length=100) 
 
@@ -47,7 +48,8 @@ for(ii in 1:nfold){
 
 	# fit lasso models and select value of penalty parameter by internal layer CV 
 	cv1 <- cv.glmnet(x.train, y.train, alpha=1,lambda=grid) 
-	# print(coef(cv1,s="lambda.1se"))
+	summary(cv1)
+	print(coef(cv1,s="lambda.1se"))
 	y.pred[idx.cv==ii,1] <- predict(cv1, x.test, s="lambda.1se")
 	
 	# fit lm model

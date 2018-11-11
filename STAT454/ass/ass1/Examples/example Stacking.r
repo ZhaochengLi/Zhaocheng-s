@@ -18,6 +18,7 @@ stacking <- function(xmat, ymat, CV=F,
 					 method1=c("lm","LASSO","Ridge","ElasticNet"), alpha1=NULL,
 					 method2=c("none","lm","LASSO","Ridge","ElasticNet"), alpha2=NULL)
 {
+  ###METHODS EVALUATION###
 	mtd1 <- match.arg(method1)
 	mtd2 <- match.arg(method2)
 	
@@ -35,16 +36,18 @@ stacking <- function(xmat, ymat, CV=F,
 		if(is.null(alpha2)) stop("need alpha value for ElasticNet")
 		if((alpha2<0) | (alpha2>1)) stop("ElasticNet need alpha between 0 and 1")
 	}
-
+  # Is ymat the full set of y's for all 5 drugs? Looking like so
 	ny <- ncol(ymat)
 	np <- ncol(xmat)
 	nn <- nrow(xmat)
 	if(nrow(ymat)!=nn) stop("Sample size of predictors and outcomes are not match!")	
-	
+	### CV-STACKING CV-MULTIFIT EXECUTION ###
 	if(CV & (mtd2=="none")) stop("cv improved stacking need to specify stage 2")
 	if(CV & (mtd2!="none")) fit1 <- cv.multiFit(xmat=xmat, ymat=ymat, alpha=alpha1, method=mtd1)
+  # This is so far stage 1
 	fit1 <- multiFit(xmat=xmat, ymat=ymat, alpha=alpha1, method=mtd1)
 	model1 <- fit1$model
+	# Is y.fitted returned by multifit the real value fitted using testing set?
 	y.step1 <- fit1$y.fitted
 	coef.step1 <- fit1$coef.mat
 
@@ -81,7 +84,9 @@ stacking <- function(xmat, ymat, CV=F,
 #################
 multiFit <- function(xmat, ymat, alpha=NULL, method=c("lm","LASSO","Ridge","ElasticNet"))
 {
-
+  # The y.fitted value here should be in matrix representing different drugs
+  # what is y.fitted value for? 
+  # Remember we take the y.fitted value as the input of the stage 2 of stacking
 
 	return(list(y.fitted=y.fitted, coef.mat=coef.mat, model=model0))
 }
