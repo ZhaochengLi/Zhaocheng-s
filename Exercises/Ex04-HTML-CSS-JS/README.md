@@ -4,9 +4,11 @@
 > When you open a web page, your browser fetches the HTML and other programming languages involved and interprets it.
 
 #### An overview:
-- HTML: it provides the **basic structure** of sites, which is enhanced and modified by other technologies like CSS and JavaScript.
-- CSS: it is used to control **presentation, formatting, and layout**
-- JavaScript: it is used to control the **behaviors of different elements**
+- [HTML](#html): it provides the **basic structure** of sites, which is enhanced and modified by other technologies like CSS and JavaScript.
+- [CSS](#css): it is used to control **presentation, formatting, and layout**
+- [JavaScript](#javascript): it is used to control the **behaviors of different elements**
+
+![flowchart](https://github.com/ZhaochengLi/Zhaocheng-s/blob/master/Exercises/Ex04-HTML-CSS-JS/Web-design.png)
 
 #### Let figure out more about their roles
 ##### HTML: always at the core position regardless complexity of a site and other languages involved.
