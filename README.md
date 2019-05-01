@@ -1,10 +1,19 @@
-# Zhaocheng-s
-<br/>This repo is used for the record of course-related learning materials mostly in programming aspect.
+# Zhaocheng Li, Excelsior!!
+<br/> DATA SCIENCE & SOFTWARE DEVELOPMENT
 
-<br/>Significant files and lecture resources will be stored in *Code*, while my learning objects on the daily basis will be in *Wiki*
+<br/> My Favoriate Programming Languages:
+  - Python
+  - R
+  - Javascript
+  - C
 
-<br/>Bachelor of Science, University of Victoria (2014-2018).
+<br/>***Major Mathematics and Computer Science***
+<br/>***Major Statistics***
 
-<br/>I will be very grateful to hear any suggestions and ideas about my works, sharing and learning are important to my life.
+**University of Victoria, BSc**, 2014-2019
+
+Certification Candidate, CCNA Data Center<br/>
+Certification Candidate, CCNA Routers & Switches<br/>
+Certification Candidate, Microsoft Office Specialist (MOS)
 
 <br/>my email: leolee0706@gmail.com
