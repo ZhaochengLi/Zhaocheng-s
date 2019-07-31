@@ -27,3 +27,5 @@
 
 page 1 of 17  |  [Next: Array Literals](@next)
 */
+let shoppingList = "Eggs" + "\n" + "Tomatoes" + "\n"
+print(shoppingList)

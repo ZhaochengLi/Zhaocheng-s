@@ -18,7 +18,7 @@ func responseTo(question: String) -> String {
 
 responseTo(question: "hello there!")
 responseTo(question: "where should I go on holiday?")
-responseTo(question: "what is the capital of France?")
+responseTo(question: "WHERE is the capital of France?")
 //: You may have noticed that `where` works, but `Where` or `WHERE` does not. You’ll learn how to deal with that on the next page.
 
 //:[Previous](@previous)  |  page 2 of 7  |  [Next: Dealing with Cases](@next)
