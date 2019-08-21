@@ -5,8 +5,7 @@
   - Python
   - R
   - Javascript
-  - C
-
+  
 <br/>***Major Mathematics and Computer Science***
 <br/>***Major Statistics***
 
