@@ -14,4 +14,4 @@
 Certification Candidate, CCNA Data Center<br/>
 Certification Candidate, Microsoft Office Specialist (MOS)
 
-<br/>my email: leolee0706@gmail.com
+Contact me: leolee0706@gmail.com
