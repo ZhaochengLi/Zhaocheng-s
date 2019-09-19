@@ -12,7 +12,6 @@
 **University of Victoria, BSc**, 2014-2019
 
 Certification Candidate, CCNA Data Center<br/>
-Certification Candidate, CCNA Routers & Switches<br/>
 Certification Candidate, Microsoft Office Specialist (MOS)
 
 <br/>my email: leolee0706@gmail.com
