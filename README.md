@@ -1,5 +1,6 @@
-# Zhaocheng Li, Excelsior!!
-<br/> DATA SCIENCE & SOFTWARE DEVELOPMENT
+<h1 style="font-family: monospace;">Zhaocheng Li, Excelsior!!</h1>
+
+<h2 style="color: red;">DATA SCIENCE & SOFTWARE DEVELOPMENT</h2>
 
 <br/> My Favoriate Programming Languages:
   - Python
