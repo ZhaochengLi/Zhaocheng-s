@@ -1,19 +1,25 @@
 <h1>Zhaocheng Li, Excelsior!!</h1>
 
-<h2>DATA SCIENCE & SOFTWARE DEVELOPMENT</h2>
+<h3>DATA SCIENCE & SOFTWARE DEVELOPMENT</h3>
 
-<h3>Preferences</h3>
+<h4>Preferences</h4>
+
 - `Python`
 - `R`
 - `JavaScript`
   
-<h3>University of Victoria, BSc**, 2014-2019</h3>
+<h4>Education</h4>
 
-**Major combined Mathematics and Computer Science**
+#### University of Victoria, BSc, 2014-2019
 
-**Major Statistics**
+##### Major combined Mathematics and Computer Science
+##### Major Statistics
+
+<h4>Activities</h4>
 
 Certification Candidate, CCNA Data Center<br/>
 Certification Candidate, Microsoft Office Specialist (MOS)
 
-Contact me: leolee0706@gmail.com
+<h4>Contact</h4>
+
+**Email**: leolee0706@gmail.com
