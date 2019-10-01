@@ -1,19 +1,25 @@
-# Zhaocheng Li, Excelsior!!
-<br/> DATA SCIENCE & SOFTWARE DEVELOPMENT
+<h1>Zhaocheng Li, Excelsior!!</h1>
 
-<br/> My Favoriate Programming Languages:
-  - Python
-  - R
-  - Javascript
-  - C
+<h3>DATA SCIENCE & SOFTWARE DEVELOPMENT</h3>
 
-<br/>***Major Mathematics and Computer Science***
-<br/>***Major Statistics***
+<h4>Preferences</h4>
 
-**University of Victoria, BSc**, 2014-2019
+- `Python`
+- `R`
+- `JavaScript`
+  
+<h4>Education</h4>
+
+#### University of Victoria, BSc, 2014-2019
+
+##### Major combined Mathematics and Computer Science
+##### Major Statistics
+
+<h4>Activities</h4>
 
 Certification Candidate, CCNA Data Center<br/>
-Certification Candidate, CCNA Routers & Switches<br/>
 Certification Candidate, Microsoft Office Specialist (MOS)
 
-<br/>my email: leolee0706@gmail.com
+<h4>Contact</h4>
+
+**Email**: leolee0706@gmail.com
