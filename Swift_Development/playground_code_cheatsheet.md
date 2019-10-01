@@ -574,3 +574,224 @@ For this and next section. *functions* and *Instance Method*, we will talk altog
 - Notice that within the body of the method definition, you can access the values of height and width of the struct without using a dot. The instance method is written as part of the struct definition, and so it can directly access the properties within the instance.
 
 ---
+Lesson 19: Enumerations and Switch
+===
+Recall when making decisions, we often use *if* statements，in this section, we will try type *enumeration* to represent a group of related choices. Each choice is called a *case*. You can define your own enumeration types, just as you can define your own *structs*
+
+	enum Lunchchoice{
+   	    case pasta
+        case burger
+        case soup
+        // or to save space: case pasta, burger, soup
+    }
+    
+    let choice = Lunchchoice.burger
+    
+this declaration above creates a new type, *Lunchchoice*, and instances of it can **only** be one of the three defined cases.
+
+---
+One thing worth noticing is that the variable has a type annotation:
+
+	var choice: Lunchchoice
+    // at this stage, the variable choice has not be initialized yet.
+    
+    choice = .burger // you can change
+    choice = .pasta
+    
+    //of course
+    let meal: Lunchchoice
+    meal = .pasta // but you cannot change
+
+---
+- So when to use Enums?
+
+Whenever you have a restricted group of related values in your code, it might be good to think about using an *neum*.
+
+If there are no restrictions on the value, or you have a large number of possible values, enums probably aren't a good fit.
+
+---
+Imagine you are wrting a fun little sports game, and you are using a *struct* to represent each player on the field. Each player has the following properties:
+- name, a String, you wouldn't use an enum here because there are so many possibilities;
+- skilllevel, an Int;
+- team, it could be an enum, there are only two teams on the field: .red and .blue;
+- position, could be an enum, .quarterback, .seeker, .pitcher, and so on, depending how you design the game.
+
+---
+- Comparing Enums
+
+		let mylunch = Lunchchoice.pasta
+        let yourlunch = Lunchchoice.soup
+        
+        if mylunch == yourlunch {
+        	blahblahblah
+        }
+
+---
+- Enums and Funtions
+
+		func cookLunch(_ choice: LunchChoice) -> String {
+    
+    		if choice == .pasta {
+        	    return "🍝"
+    		} else if choice == .burger {
+        	    return "🍔"
+    		} else {
+        	    return "🍲" // it is actually not anything, it is soup
+                // but if you use else if choice == .soup, you still gonna need one more return
+                // value outside the if-statements, but you will never get there.
+    		}
+		}
+
+		cookLunch(.burger)
+
+---
+You will soon realize the if-statements are not a good fit when dealing with *enums*. 
+
+They add a lot of visual noise, and they cannot tell that you've covered all of the cases, even though the point of enums is to provide a limited list of cases.
+
+The *switch* statement is a better way.
+
+---
+	
+    enum LunchChoice {
+        case pasta
+        case burger
+        case soup
+	}
+
+    let choice = LunchChoice.burger
+    
+    switch choice {
+    case .pasta: "🍝"
+    case .burger: "🍔"
+    case .soup: "🍲"
+    }
+    
+    // switch is designed to work very well with enums
+If the value being checked matches the case statement, the code between the matched case and the next case is run. Then the switch statement, just like the if-statement, is done.
+
+---
+- Exhausting the possibilities. *Switch-statements* have a special feature: they must be exhaustive. This means a switch statement must exhaust every possibility of the value being checked. With an enum, you can use a different case to handle every possible value. (i.e., it must cover all the cases that enum has.)
+
+- The default case, see the example next page, the *switch-statements* does not have a case for every possible value of the enum. Instead, there is a *default* keywaord which will be used if no other matches are found. This is similar to the *else* clause in an if-statements
+
+---
+
+	enum Quality {
+    	case bad, poor, acceptable, good, great
+	}
+
+	let quality = Quality.good
+    
+    switch quality {
+	case .bad:
+    print("That really won't do")
+    case .poor:
+    print("That's not good enough")
+    default:
+    print("OK, I'll take it")
+    }
+
+---
+- Multiple cases
+
+A default case might cause you problems later on if you add new cases to enum. The switch statement will use the default case for your new value, which may not be what you want. **Instead, you can match several values in the same case.**
+
+	switch quality {
+	case .bad:
+    print("That really won't do")
+	case .poor:
+    print("That's not good enough")
+	case .acceptable, .good, .great:
+    print("OK, I'll take it")
+	}
+
+---
+Other than using with enums, you can also use *switch-statements* with other values. For example, it can work with strings and numbers, since **it is impossible to have an exhaustive list of all string and number values, switch-statements using these types require a default case.**
+
+	let animal = "cat"
+
+	func soundFor(animal: String) -> String {
+    	switch animal {
+        	case "cat":
+            	return "Meow!"
+        	case "dog":
+            	return "Woof!"
+        	case "cow":
+            	return "Moo!"
+        	case "chicken":
+            	return "Cluck!"
+        	default:
+            	return "I don't know that animal!"
+    	}
+	}
+
+	soundFor(animal: animal)
+    
+---
+- Back to the cafe
+
+		enum LunchChoice {
+   	        case pasta, burger, soup
+		}
+
+		func cookLunch(_ choice: LunchChoice) -> String {
+    	    switch choice {
+                case .pasta:
+                    return "🍝"
+                case .burger:
+                    return "🍔"
+                case .soup:
+                    return "🍲"
+            }
+        }
+
+        cookLunch(.burger)
+        
+---
+- Enum Methods and Properties
+
+In the Structures lesson you saw how to define properties and methods in a struct, you can also define them in an enum. This can be very useful in providing extra behaviour. Foe example:
+
+	enum LunchChoice {
+    	case pasta, burger, soup
+    
+    	var emoji: String {
+        	switch self {
+        		case .pasta:
+            		return "🍝"
+        		case .burger:
+            		return "🍔"
+        		case .soup:
+            		return "🍲"
+        	}
+    	}
+	}
+
+	let lunch = LunchChoice.pasta // pasta
+	lunch.emoji // "(pasta emoji)"
+    
+---
+- Another example:
+
+		enum Suit {
+    		case spades, hearts, diamonds, clubs
+    
+    		var rank: Int {
+        		switch self {
+        			case .spades: return 4
+        			case .hearts: return 3
+        			case .diamonds: return 2
+        			case .clubs: return 1
+        		}
+    		}
+    
+    		func beats(_ otherSuit: Suit) -> Bool {
+        		return self.rank > otherSuit.rank
+    		}
+		}
+
+		let oneSuit = Suit.spades   //spades
+		let otherSuit = Suit.clubs  // clubs
+		oneSuit.beats(otherSuit)    // True
+		oneSuit.beats(oneSuit)      // False

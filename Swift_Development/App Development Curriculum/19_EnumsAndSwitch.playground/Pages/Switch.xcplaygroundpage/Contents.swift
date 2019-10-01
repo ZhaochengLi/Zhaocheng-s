@@ -13,7 +13,7 @@ enum LunchChoice {
     case soup
 }
 
-let choice = LunchChoice.burger
+let choice = LunchChoice.pasta
 /*:
  The answer is a _switch_ statement:
  */
@@ -25,6 +25,8 @@ switch choice {
     case .soup:
         "🍲"
 }
+
+
 /*:
  The switch statement looks very much like the enum declaration above. That’s because they’re designed to work well together.
  
